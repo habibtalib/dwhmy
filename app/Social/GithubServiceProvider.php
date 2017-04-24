@@ -4,7 +4,7 @@ namespace App\Social;
 
 use App\User;
 
-class TwitterServiceProvider extends AbstractServiceProvider
+class GithubServiceProvider extends AbstractServiceProvider
 {
     /**
      *  Handle Facebook response
@@ -21,13 +21,13 @@ class TwitterServiceProvider extends AbstractServiceProvider
             'verified',
         ])->user();
 
-        $existingUser = User::whereEmail($user->email)->orWhere('settings->twitter_id', $user->id)->first();
+        $existingUser = User::whereEmail($user->email)->orWhere('settings->github_id', $user->id)->first();
 
         if ($existingUser) {
             $settings = $existingUser->settings;
 
-            if (! isset($settings['twitter_id'])) {
-                $settings['twitter_id'] = $user->id;
+            if (! isset($settings['github_id'])) {
+                $settings['github_id'] = $user->id;
                 $existingUser->settings = $settings;
                 $existingUser->save();
             }
@@ -41,7 +41,7 @@ class TwitterServiceProvider extends AbstractServiceProvider
             'email' => $user->email,
             'gender' => ucfirst($user->user['gender']),
             'settings' => [
-                'twitter_id' => $user->id,
+                'github_id' => $user->id,
             ]
         ]);
 
