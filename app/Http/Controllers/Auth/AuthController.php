@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Auth;
 use Socialite;
+use App\User;
 
 class AuthController extends Controller
 {
@@ -35,7 +36,7 @@ class AuthController extends Controller
     public function handleProviderCallback($provider)
     {
         $user = Socialite::driver($provider)->user();
-
+        //dd($user);
         $authUser = $this->findOrCreateUser($user, $provider);
         Auth::login($authUser, true);
         return redirect($this->redirectTo);
@@ -57,8 +58,8 @@ class AuthController extends Controller
         return User::create([
             'name'     => $user->name,
             'email'    => $user->email,
-            'provider' => $provider,
+            'settings' => [ 'provider' => $provider,
             'provider_id' => $user->id
-        ]);
+        ]]);
     }
 }

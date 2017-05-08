@@ -13,6 +13,7 @@ class TwitterServiceProvider extends AbstractServiceProvider
      */
     public function handle()
     {
+        dd($this->provider->user());
         $user = $this->provider->fields([
             'first_name',
             'last_name',
