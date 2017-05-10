@@ -33,9 +33,8 @@
                                     <div class="form-group">
                                         <label for="category">Category</label>
                                         <select class="form-control selectpicker" name="category" id="category">
-                                            <option value="" {{($item->category == '') ? 'selected' : ''}}>All Categories</option>
-                                            <option value="Billboard" {{($item->category == 'Billboard') ? 'selected' : ''}}>Billboard</option>
-                                            <option value="Digital Billboard" {{($item->category == 'Digital Billboard') ? 'selected' : ''}}>Digital Billboard</option>
+                                            <option value="1" {{($item->category == '1') ? 'selected' : ''}}>Event</option>
+                                            <option value="2" {{($item->category == '2') ? 'selected' : ''}}>Class</option>
                                         </select>
                                     </div>
                                     <!--end form-group-->
@@ -69,23 +68,26 @@
                                 <!--end col-md-6-->
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <label for="region">Listing Location</label>
-                                        <select class="form-control selectpicker" name="location" id="location">
-                                            <option value="Kuala Lumpur" {{($item->location == 'Kuala Lumpur') ? 'selected' : ''}}>Kuala Lumpur</option>
-                                            <option value="Selangor" {{($item->location == 'Selangor') ? 'selected' : ''}}>Selangor</option>
-                                            <option value="Melaka" {{($item->location == 'Melaka') ? 'selected' : ''}}>Melaka</option>
-                                            <option value="Johor" {{($item->location == 'Johor') ? 'selected' : ''}}>Johor</option>
-                                        </select>
+                                        <label for="phone">Fees </label>
+                                        <input type="text" class="form-control" name="fee" id="fee" value="{{$item->fee}}" required>
                                     </div>
                                     <!--end form-group-->
                                     <div class="form-group">
-                                        <label for="phone">Price </label>
-                                        <input type="text" class="form-control" name="phone" id="phone" value="{{$item->phone}}" required>
+                                        <label for="start_date">Date</label>
+                                        <input type="text" class="form-control date-picker" name="start_date" value="{{$item->start_date}}" placeholder="Start Date">
                                     </div>
                                     <!--end form-group-->
                                     <div class="form-group">
-                                        <label for="email">Dimension </label>
-                                        <input type="text" class="form-control" name="email" id="email" value="{{$item->email}}" required>
+                                        <input type="text" class="form-control date-picker" name="end_date" value="{{$item->end_date}}" placeholder="End Date">
+                                    </div>
+                                    <!--end form-group-->
+                                    <div class="form-group">
+                                        <label for="start_time">Time</label>
+                                        <input type="text" class="form-control time-picker" name="start_time" value="{{Carbon\Carbon::parse($item->start_time)->format('h:i A')}}" id="start_time"  placeholder="Start">
+                                    </div>
+                                    <!--end form-group-->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control time-picker" name="end_time" value="{{Carbon\Carbon::parse($item->end_time)->format('h:i A')}}" id="end_time"  placeholder="End">
                                     </div>
                                     <!--end form-group-->
                                 </div>

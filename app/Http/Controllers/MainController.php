@@ -170,11 +170,13 @@ class MainController extends Controller
 
     public function submit(UploadRequest $request){
 
-        $request->start_date = new Carbon($request->start_date);
-        $request->end_date = new Carbon($request->end_date);
+        $input = array_map('trim' , $request->all());
+        $input['start_date'] = new Carbon($request->start_date);
+        $input['end_date'] = new Carbon($request->end_date);
 
-        $request->start_time =  date("H:i:s", strtotime($request->start_time));
-        $request->end_time =  date("H:i:s", strtotime($request->end_time));
+        $input['start_time'] =  date("H:i:s", strtotime($request->start_time));
+        $input['end_time'] =  date("H:i:s", strtotime($request->end_time));
+        $request->replace($input);
 
 
         $item = Items::create($request->except('files'));
@@ -202,6 +204,16 @@ class MainController extends Controller
     }
 
     public function update($id, UploadRequest $request){
+        //dd($request->all());
+        $input = array($request->all())[0];
+        $input['start_date'] = new Carbon($request->start_date);
+        $input['end_date'] = new Carbon($request->end_date);
+
+        $input['start_time'] =  date("H:i:s", strtotime($request->start_time));
+        $input['end_time'] =  date("H:i:s", strtotime($request->end_time));
+        //dd($input);
+        $request->replace($input);
+
         $item = Items::findOrFail($id);
 
         $this->validate($request, [

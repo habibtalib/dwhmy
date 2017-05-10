@@ -9,8 +9,8 @@
         <div class="form-group">
             <select class="form-control selectpicker" name="category">
                 <option value="" {{($request->category == '') ? 'selected' : ''}}>All Categories</option>
-                <option value="Billboard" {{($request->category == 'Billboard') ? 'selected' : ''}}>Billboard</option>
-                <option value="Digital Billboard" {{($request->category == 'Digital Billboard') ? 'selected' : ''}}>Digital Billboard</option>
+                <option value="1" {{($request->category == '1') ? 'selected' : ''}}>Event</option>
+                <option value="2" {{($request->category == '2') ? 'selected' : ''}}>Classes</option>
             </select>
         </div>
         <!--end form-group-->

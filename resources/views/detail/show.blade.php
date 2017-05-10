@@ -65,9 +65,13 @@
                                         <address>
                                             <figure><i class="fa fa-map-marker"></i>{{$item->address}}</figure>
                                             <hr>
-                                            <figure>Price : RM{{$item->phone}}</figure>
+                                            <figure>Fee : RM{{$item->fee}}</figure>
                                             <hr>
-                                            <figure>Dimension : {{$item->email}}</figure>
+                                            <figure>Start Date : {{$item->start_date}}</figure>
+                                            <figure>End Date : {{$item->end_date}}</figure>
+                                            <hr>
+                                            <figure>Start Time : {{Carbon\Carbon::parse($item->start_time)->format('h:i A')}}</figure>
+                                            <figure>End Time : {{Carbon\Carbon::parse($item->end_time)->format('h:i A')}}</figure>
                                         </address>
                                     </div>
                                 </section>
