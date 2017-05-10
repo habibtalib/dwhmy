@@ -4,12 +4,12 @@
     <div class="container">
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
-            <li><a href="\listing">Event</a></li>
+            <li><a href="\listing">Post</a></li>
             <li class="active">Create</li>
         </ol>
         <!--end breadcrumb-->
         <section class="page-title center">
-            <h1>New Event</h1>
+            <h1>New Class</h1>
         </section>
         <!--end page-title-->
         <section>
@@ -19,11 +19,11 @@
                     <form class="form inputs-underline" enctype="multipart/form-data" action="\submit" method="POST">
                         {{csrf_field()}}
                         <section>
-                            <h3>About</h3>
+                            <h3>Details</h3>
                             <div class="row">
                                 <div class="col-md-9 col-sm-9">
                                     <div class="form-group">
-                                        <label for="title">Event Title</label>
+                                        <label for="title">Title</label>
                                         <input type="text" class="form-control" name="title" id="title" placeholder="Title" required>
                                     </div>
                                     <!--end form-group-->
@@ -33,10 +33,8 @@
                                     <div class="form-group">
                                         <label for="category">Category</label>
                                         <select class="form-control selectpicker" name="category" id="category" required>
-                                            <option value="Seerah" >Seerah</option>
-                                            <option value="Aqidah" >Aqidah</option>
-                                            <option value="Fiqh" >Fiqh</option>
-                                            <option value="Arabic" >Arabic</option>
+                                            <option value="1" >Event</option>
+                                            <option value="2" >Class</option>
                                         </select>
                                     </div>
                                     <!--end form-group-->
@@ -49,6 +47,7 @@
                                 <textarea class="form-control" id="description" rows="4" name="description"></textarea>
                             </div>
                             <!--end form-group-->
+                        </section>
                         </section>
                         <section>
                             <h3>Contact</h3>
@@ -69,14 +68,13 @@
                                 </div>
                                 <!--end col-md-6-->
                                 <div class="col-md-6 col-sm-6">
-                                    <!--end form-group-->
                                     <div class="form-group">
-                                        <label for="Fee">Fees</label>
+                                        <label for="fee">Fees</label>
                                         <input type="text" class="form-control" name="fee" id="fee" value="" placeholder="Fees">
                                     </div>
                                     <!--end form-group-->
                                     <div class="form-group">
-                                        <label for="Fee">Event Date</label>
+                                        <label for="start_date">Date</label>
                                         <input type="text" class="form-control date-picker" name="start_date" placeholder="Start Date">
                                     </div>
                                     <!--end form-group-->
@@ -85,12 +83,12 @@
                                     </div>
                                     <!--end form-group-->
                                     <div class="form-group">
-                                        <label for="Fee">Time</label>
-                                        <input type="text" class="form-control" name="start_time" id="start_time" value="" placeholder="Start">
+                                        <label for="start_time">Time</label>
+                                        <input type="text" class="form-control time-picker" name="start_time" id="start_time" value="" placeholder="Start">
                                     </div>
                                     <!--end form-group-->
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="end_time" id="end_time" value="" placeholder="End">
+                                        <input type="text" class="form-control time-picker" name="end_time" id="end_time" value="" placeholder="End">
                                     </div>
                                     <!--end form-group-->
                                 </div>
@@ -125,6 +123,7 @@
 @endsection
 
 @section('script')
+    <script type="text/javascript" src="assets/js/jquery.timepicker.min.js"></script>
     <script>
         var _latitude = '3.15910600';
         var _longitude = '101.89345200';

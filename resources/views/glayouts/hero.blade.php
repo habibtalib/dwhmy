@@ -13,7 +13,7 @@
                             <figure class="label label-default">From RM60</figure>
                             <figure class="location"><i class="fa fa-map-marker"></i>Interactive Dakwah Training (IDT) Centre</figure>
                             <hr>
-                            <div class="count-down" data-countdown-year="2019" data-countdown-month="1" data-countdown-day="21"></div>
+                            <div class="count-down" data-countdown-year="2017" data-countdown-month="1" data-countdown-day="21"></div>
                             <a href="/detail/1" class="btn btn-default btn-framed btn-rounded">View Detail</a>
                         </div>
                     </div>

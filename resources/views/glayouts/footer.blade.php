@@ -40,7 +40,7 @@
         <div class="footer-navigation">
             <div class="container">
                 <div class="vertical-aligned-elements">
-                    <div class="element width-50">(C) 2017 GetRiuh.com, All right reserved</div>
+                    <div class="element width-50">(C) 2017 Dawah.my, All right reserved</div>
                     <div class="element width-50 text-align-right">
                         <a href="/">Home</a>
                         <a href="listing">Listings</a>

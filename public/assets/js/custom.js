@@ -35,6 +35,10 @@ $(document).ready(function($) {
         $(".date-picker").datepicker();
     }
 
+    if( $(".time-picker").length ){
+        $(".time-picker").timepicker({});
+    }
+
     heroSectionHeight();
 
 // Render hero search form ---------------------------------------------------------------------------------------------

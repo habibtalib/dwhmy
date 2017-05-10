@@ -8,3 +8,5 @@
 <link rel="stylesheet" href="{{url('/')}}/assets/css/trackpad-scroll-emulator.css" type="text/css">
 <link rel="stylesheet" href="{{url('/')}}/assets/css/jquery.nouislider.min.css" type="text/css">
 <link rel="stylesheet" href="{{url('/')}}/assets/css/style.css" type="text/css">
+<link rel="stylesheet" href="{{url('/')}}/assets/css/style.css" type="text/css">
+<link rel="stylesheet" href="{{url('/')}}/assets/css/jquery.timepicker.min.css" type="text/css">

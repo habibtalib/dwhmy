@@ -164,12 +164,20 @@ class MainController extends Controller
         return view('about-us');
     }
 
+    public function blog(){
+        return view('blog');
+    }
+
     public function submit(UploadRequest $request){
 
         $request->start_date = new Carbon($request->start_date);
         $request->end_date = new Carbon($request->end_date);
 
-        $item = Items::create($request->except('files','start_date','end_date'));
+        $request->start_time =  date("H:i:s", strtotime($request->start_time));
+        $request->end_time =  date("H:i:s", strtotime($request->end_time));
+
+
+        $item = Items::create($request->except('files'));
 
         if(!empty($request->file('files'))){
             $first = true;
