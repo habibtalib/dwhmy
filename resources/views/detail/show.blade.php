@@ -23,7 +23,10 @@
                     @if (Auth::check())
                     <a href="/delete/{{$item['id']}}?back=1" class="btn btn-primary btn-framed btn-rounded btn-light-frame icon scroll pull-right"></i>Delete</a>
                     <a href="/edit/{{$item['id']}}" class="btn btn-primary btn-framed btn-rounded btn-light-frame icon scroll pull-right"></i>Edit</a>
+                        @else
+
                     @endif
+                    <a href="/register-class/{{$item['id']}}" class="btn btn-primary btn-framed btn-rounded btn-light-frame icon scroll pull-right"></i>Register</a>
                 </section>
 
                 <div class="row">

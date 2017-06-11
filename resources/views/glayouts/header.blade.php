@@ -8,11 +8,9 @@
             <div class="primary-nav has-mega-menu">
                 <ul class="navigation">
                     <li class="{{ (Request::path() == '/') ? 'active': ''}}"><a href="/">Home</a></li>
-                    <li class="{{ (Request::path() == 'event') ? 'active': ''}}"><a href="event">Event</a></li>
-                    <li class="{{ (Request::path() == 'class') ? 'active': ''}}"><a href="class">Class</a></li>
-                    <li class="{{ (Request::path() == 'blog') ? 'active': ''}}"><a href="blog">Blog</a></li>
-                    <li class="{{ (Request::path() == 'about-us') ? 'active': ''}}"><a href="about-us">About Us</a></li>
-                    <li class="{{ (Request::path() == 'contact-us') ? 'active': ''}}"> <a href="contact-us">Contact Us</a></li>
+                    <li class="{{ (Request::path() == 'listing') ? 'active': ''}}"><a href="/listing">Class/Event</a></li>
+                    <li class="{{ (Request::path() == 'blog') ? 'active': ''}}"><a href="/tv">Dawah TV</a></li>
+                    <li class="{{ (Request::path() == 'contact-us') ? 'active': ''}}"> <a href="/contact-us">Contact Us</a></li>
                 </ul>
                 <!--end navigation-->
             </div>

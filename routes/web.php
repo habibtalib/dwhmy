@@ -83,7 +83,7 @@ Route::post('/modal/item/{item}', 'ModalController@item');
 
 Route::get('/contact-us', 'MainController@contactUs');
 Route::get('/about-us', 'MainController@aboutUs');
-Route::get('/blog', 'MainController@blog');
+Route::get('/tv', 'MainController@tv');
 
 Route::get('/img/{id}', 'MainController@getimage');
 Route::get('/delete/{id}', 'MainController@deleteItem');

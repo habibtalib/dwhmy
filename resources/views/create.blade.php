@@ -48,7 +48,6 @@
                             </div>
                             <!--end form-group-->
                         </section>
-                        </section>
                         <section>
                             <h3>Contact</h3>
                             <div class="row">
@@ -70,7 +69,7 @@
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
                                         <label for="fee">Fees</label>
-                                        <input type="text" class="form-control" name="fee" id="fee" value="" placeholder="Fees">
+                                        <input type="number" class="form-control" name="fee" id="fee" value="" placeholder="Fees">
                                     </div>
                                     <!--end form-group-->
                                     <div class="form-group">

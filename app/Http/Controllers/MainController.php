@@ -164,8 +164,9 @@ class MainController extends Controller
         return view('about-us');
     }
 
-    public function blog(){
-        return view('blog');
+    public function tv(){
+        $recent = Items::get();
+        return view('tv',compact('recent'));
     }
 
     public function submit(UploadRequest $request){

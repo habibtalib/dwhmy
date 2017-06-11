@@ -33,8 +33,8 @@
                                     <div class="form-group">
                                         <label for="category">Category</label>
                                         <select class="form-control selectpicker" name="category" id="category">
-                                            <option value="1" {{($item->category == '1') ? 'selected' : ''}}>Event</option>
-                                            <option value="2" {{($item->category == '2') ? 'selected' : ''}}>Class</option>
+                                            <option value="Event" {{($item->category == 'Event') ? 'selected' : ''}}>Event</option>
+                                            <option value="Class" {{($item->category == 'Class') ? 'selected' : ''}}>Class</option>
                                         </select>
                                     </div>
                                     <!--end form-group-->
@@ -69,7 +69,7 @@
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
                                         <label for="phone">Fees </label>
-                                        <input type="text" class="form-control" name="fee" id="fee" value="{{$item->fee}}" required>
+                                        <input type="number" class="form-control" name="fee" id="fee" value="{{$item->fee}}" required>
                                     </div>
                                     <!--end form-group-->
                                     <div class="form-group">

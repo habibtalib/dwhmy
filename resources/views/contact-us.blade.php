@@ -40,49 +40,6 @@
                     </div>
                 </div>
                 <!--end col-md-3-->
-                <div class="col-md-9 col-sm-9">
-                    <h3>Form</h3>
-                    <form class="form inputs-underline" id="form-hero" method="POST" action="/">
-                        {{csrf_field()}}
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" class="form-control" name="name" id="name">
-                                </div>
-                                <!--end form-group-->
-                            </div>
-                            <!--end col-md-4-->
-                            <div class="col-md-4 col-sm-4">
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email">
-                                </div>
-                                <!--end form-group-->
-                            </div>
-                            <!--end col-md-4-->
-                            <div class="col-md-4 col-sm-4">
-                                <div class="form-group">
-                                    <label for="subject">Subject</label>
-                                    <input type="text" class="form-control" name="subject" id="subject">
-                                </div>
-                                <!--end form-group-->
-                            </div>
-                            <!--end col-md-4-->
-                        </div>
-                        <!--end row-->
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="4" name="message"></textarea>
-                        </div>
-                        <!--end form-group-->
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary icon shadow">Send Message<i class="fa fa-caret-right"></i></button>
-                        </div>
-                        <!--end form-group-->
-                    </form>
-                </div>
-                <!--end col-md-9-->
             </div>
             <!--end row-->
         </div>
